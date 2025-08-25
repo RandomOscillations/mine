@@ -1,11 +1,13 @@
 import Navbar from "@/components/navbar";
+import MaxWidthWrapper from "@/components/max-width-wrapper";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className="py-5 px-4">
+    <MaxWidthWrapper>
+      {/* navbar */}
       <Navbar />
-    </div>
+    </MaxWidthWrapper>
   );
 };
 

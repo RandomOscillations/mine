@@ -16,7 +16,7 @@ const ThemeSwitch = () => {
   return (
     <div
       className="rounded-full bg-[--color-background] p-2 cursor-pointer border max-w-fit"
-      style={{ borderColor: "var(--color-border)" }}
+      style={{ borderColor: "var(--color-theme-border)" }}
       onClick={handleThemeSwitch}
     >
       {theme === "dark" ? (
