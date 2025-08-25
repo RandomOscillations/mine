@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+/* Use the custom font */
+body {
+  font-family: var(--font-satoshi), system-ui, sans-serif;
+}
+
+/* Dark mode configuration for next-themes */
+:root {
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-border: #e2e5e9;
+}
+
+/* Apply dark mode styles when data-theme="dark" */
+[data-theme="dark"] {
+  --color-background: hsl(0, 0%, 5%);
+  --color-text: hsl(0, 0%, 95%);
+  --color-border: #212121;
+}
