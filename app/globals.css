@@ -10,6 +10,7 @@ body {
   --color-background: #ffffff;
   --color-text: #000000;
   --color-theme-border: #e2e5e9;
+  --color-bio: hsl(0, 0%, 40%);
 }
 
 /* Apply dark mode styles when data-theme="dark" */
@@ -17,4 +18,5 @@ body {
   --color-background: hsl(0, 0%, 5%);
   --color-text: hsl(0, 0%, 95%);
   --color-theme-border: #212121;
+  --color-bio: hsl(0, 0%, 70%);
 }

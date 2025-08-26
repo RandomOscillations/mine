@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import React from "react";
+import IntroductionHeader from "@/components/introduction-header";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       {/* navbar */}
       <Navbar />
       <MaxWidthWrapper>
-        <div></div>
+        <IntroductionHeader />
       </MaxWidthWrapper>
     </>
   );
