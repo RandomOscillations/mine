@@ -24,6 +24,23 @@ export type TProjects = {
   techStack: { name: string; icon: string; customIcon?: string }[]; // customIcon should be the filename without .svg extension
 };
 
+export type TPosition = {
+  id: number;
+  title: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  techStack: { name: string; icon: string; customIcon?: string }[]; // customIcon should be the filename without .svg extension
+};
+
+export type TExperience = {
+  id: number;
+  company: string;
+  position: TPosition[];
+  startDate: string;
+  endDate: string;
+};
+
 export const navLinks: TNavLink[] = [
   { id: 1, label: "X", link: "https://x.com/divandcode", icon: "XLogoIcon" },
   {
@@ -106,5 +123,76 @@ export const projects: TProjects[] = [
       { name: "Expo", icon: "expo", customIcon: "expo-icon" },
       { name: "OpenAI", icon: "openai" },
     ],
+  },
+];
+
+export const experiences: TExperience[] = [
+  {
+    id: 1,
+    company: "Univeristy of the Fraser Valley",
+    position: [
+      {
+        id: 1,
+        title: "Computer Science Researcher",
+        description:
+          "Leading ongoing research under UFV&apos;s School of Computing to develop a cross-platform psychiatric diagnostics app powered by streaming RAG-based LLMs, real-time STT/TTS pipelines, and history-aware conversational AI.",
+        startDate: "2025-02-01",
+        endDate: "Present",
+        techStack: [
+          { name: "Next.js", icon: "nextjs2" },
+          { name: "TypeScript", icon: "typescript" },
+          { name: "Python", icon: "pytorch", customIcon: "python-icon" },
+          { name: "TailwindCSS", icon: "tailwindcss" },
+          { name: "Supabase", icon: "supabase", customIcon: "supabase-icon" },
+          { name: "Expo", icon: "expo", customIcon: "expo-icon" },
+          { name: "Gemini", icon: "gemini", customIcon: "gemini-icon" },
+          { name: "Hugging Face", icon: "huggingface" },
+          { name: "OpenAI", icon: "openai" },
+          { name: "Claude", icon: "claude" },
+          { name: "Colab", icon: "colab" },
+        ],
+      },
+      {
+        id: 2,
+        title: "Frontend Developer",
+        description:
+          "Built and maintained a WordPress-based web app under UFV&apos;s Graphic Design Department, focusing on motion design, Laravel backend, and scalable content management for diverse users.",
+        startDate: "2025-01-01",
+        endDate: "Present",
+        techStack: [
+          { name: "WordPress", icon: "wordpress" },
+          { name: "JavaScript", icon: "js" },
+          { name: "Laravel", icon: "laravel" },
+          { name: "PHP", icon: "php" },
+          { name: "Figma", icon: "figma" },
+        ],
+      },
+    ],
+    startDate: "2024-01-01",
+    endDate: "Present",
+  },
+  {
+    id: 2,
+    company: "Zippex",
+    position: [
+      {
+        id: 1,
+        title: "Full Stack Developer",
+        description:
+          "Developed and maintained a web app for Zippex, a startup that provides a platform for users to create and share their own zip codes.",
+        startDate: "2024-08-01",
+        endDate: "2024-12-31",
+        techStack: [
+          { name: "Next.js", icon: "nextjs2" },
+          { name: "React Native", icon: "react" },
+          { name: "TypeScript", icon: "typescript" },
+          { name: "TailwindCSS", icon: "tailwindcss" },
+          { name: "Firebase", icon: "firebase" },
+          { name: "Expo", icon: "expo", customIcon: "expo-icon" },
+        ],
+      },
+    ],
+    startDate: "2024-08-01",
+    endDate: "2024-12-31",
   },
 ];
