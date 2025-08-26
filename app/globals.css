@@ -19,6 +19,7 @@ body {
   --color-project-card-badge-shadow: none;
   --color-project-card-badge-icon-loader: #e2e5e9;
   --color-experience-card-description: hsl(0, 0%, 60%);
+  --color-tool-card-description: hsl(0, 0%, 20%);
 }
 
 /* Apply dark mode styles when data-theme="dark" */
@@ -36,4 +37,5 @@ body {
     rgba(160, 160, 160, 0.2);
   --color-project-card-badge-icon-loader: #404040;
   --color-experience-card-description: hsl(0, 0%, 50%);
+  --color-tool-card-description: hsl(0, 0%, 70%);
 }

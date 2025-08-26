@@ -42,6 +42,13 @@ export type TExperience = {
   endDate: string;
 };
 
+export type TTools = {
+  id: number;
+  name: string;
+  icon: string;
+  customIcon?: string;
+};
+
 export const navLinks: TNavLink[] = [
   { id: 1, label: "X", link: "https://x.com/divandcode", icon: "XLogoIcon" },
   {
@@ -198,4 +205,22 @@ export const experiences: TExperience[] = [
     startDate: "2024-08-01",
     endDate: "2024-12-31",
   },
+];
+
+export const frontendTools: TTools[] = [
+  { id: 2, name: "Next.js", icon: "nextjs2" },
+  { id: 1, name: "TypeScript", icon: "typescript" },
+  { id: 3, name: "React.js", icon: "react" },
+  { id: 4, name: "TailwindCSS", icon: "tailwindcss" },
+];
+
+export const backendTools: TTools[] = [
+  { id: 1, name: "Vercel", icon: "vercel" },
+  { id: 2, name: "Azure", icon: "azure", customIcon: "azure-icon" },
+  { id: 3, name: "Drizzle", icon: "drizzle", customIcon: "drizzle-icon" },
+  { id: 4, name: "tRPC", icon: "tRPC" },
+  { id: 5, name: "PostgreSQL", icon: "postgresql" },
+  { id: 7, name: "Supabase", icon: "supabase", customIcon: "supabase-icon" },
+  { id: 6, name: "Docker", icon: "docker" },
+  { id: 8, name: "Node.js", icon: "nodejs" },
 ];

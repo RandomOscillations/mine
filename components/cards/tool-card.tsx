@@ -1,17 +1,16 @@
 "use client";
 
+import React from "react";
+import { TTools } from "@/constants";
 import StackIcon from "tech-stack-icons";
 import { useTheme } from "next-themes";
-import React from "react";
 import Image from "next/image";
 
-type TCustomStackBadge = {
-  name: string;
-  icon: string;
-  customIcon?: string; // Should be the filename without .svg extension
+export type TToolCard = {
+  tool: TTools;
 };
 
-const CustomStackBadge = ({ name, icon, customIcon }: TCustomStackBadge) => {
+const ToolCard = ({ tool }: TToolCard) => {
   const { resolvedTheme } = useTheme();
   const [isMounted, setIsMounted] = React.useState(false);
 
@@ -28,22 +27,24 @@ const CustomStackBadge = ({ name, icon, customIcon }: TCustomStackBadge) => {
         />
       );
 
-    if (customIcon) {
+    if (tool.customIcon) {
       // Check if this is a theme-aware icon (has light/dark variants)
       const themeAwareIcons = ["expo-icon", "drizzle-icon"];
-      const isThemeAware = themeAwareIcons.includes(customIcon);
+      const isThemeAware = themeAwareIcons.includes(tool.customIcon);
 
       if (isThemeAware) {
         // For theme-aware icons, use the appropriate variant
         const iconVariant =
-          resolvedTheme === "dark" ? `${customIcon}-light` : customIcon;
+          resolvedTheme === "dark"
+            ? `${tool.customIcon}-light`
+            : tool.customIcon;
         return (
           <Image
             src={`/images/icons/${iconVariant}.svg`}
-            alt={name}
-            width={12}
-            height={12}
-            className="size-3"
+            alt={tool.name}
+            width={32}
+            height={32}
+            className="size-8"
           />
         );
       }
@@ -51,33 +52,32 @@ const CustomStackBadge = ({ name, icon, customIcon }: TCustomStackBadge) => {
       // For regular custom icons
       return (
         <Image
-          src={`/images/icons/${customIcon}.svg`}
-          alt={name}
-          width={12}
-          height={12}
-          className="size-3"
+          src={`/images/icons/${tool.customIcon}.svg`}
+          alt={tool.name}
+          width={32}
+          height={32}
+          className="size-8"
         />
       );
     }
 
     return (
       <StackIcon
-        name={icon}
-        className="size-3"
+        name={tool.icon}
+        className="size-8"
         variant={resolvedTheme === "dark" ? "dark" : "light"}
       />
     );
   };
 
   return (
-    <div
-      className="flex items-center gap-1 px-2.5 border-[0.3px] rounded-xl py-[2.5px] border-[var(--color-project-card-badge-border)] bg-[var(--color-project-card-badge-bg)] shadow-[var(--color-project-card-badge-shadow)] cursor-default"
-      suppressHydrationWarning
-    >
+    <div className="flex flex-col items-center gap-1.5">
       {renderIcon()}
-      <span className="text-xs tracking-wide">{name}</span>
+      <span className="text-xs tracking-wide text-[var(--color-tool-card-description)]">
+        {tool.name}
+      </span>
     </div>
   );
 };
 
-export default CustomStackBadge;
+export default ToolCard;
