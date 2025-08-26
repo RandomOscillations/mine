@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <div>
       {experiences.map((experience) => (
-        <ExperienceCard key={experience.id} experience={experience} />
+        <ExperienceCard key={experience.id} {...experience} />
       ))}
     </div>
   );
