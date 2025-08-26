@@ -8,14 +8,16 @@ import Link from "next/link";
 
 const ThemeSwitch = dynamic(() => import("./theme-swtch"), {
   ssr: false,
-  loading: () => <div>Loading...</div>,
+  loading: () => (
+    <div className="size-[25px] animate-pulse bg-gray-300 rounded-full"></div>
+  ),
 });
 
 const Navbar = () => {
   return (
     <div className="max-w-4xl mx-auto">
       {/* nav container */}
-      <div className="mx-auto max-w-2xl px-5 py-3 border-x border-dashed border-gray-400 dark:border-neutral-800">
+      <div className="mx-auto max-w-2xl px-5 py-3 border-x border-dashed border-[var(--color-main-border)]">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             {navLinks.map((link) => {
@@ -37,7 +39,7 @@ const Navbar = () => {
         </nav>
       </div>
       {/* This creates the horizontal dashed line that will intersect with the wrapper borders */}
-      <div className="w-full border-b border-dashed border-gray-400 dark:border-neutral-800"></div>
+      <div className="w-full border-b border-dashed border-[var(--color-main-border)]"></div>
     </div>
   );
 };

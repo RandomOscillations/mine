@@ -1,5 +1,5 @@
 import IntroductionHeader from "./introduction-header";
-import TabSwitch from "./tab-switch";
+import { TabSwitch, TabContent } from "./tabs";
 import AgeCounter from "./age-counter";
 import Navbar from "./navbar";
 import ThemeSwitch from "./theme-swtch";
@@ -12,4 +12,5 @@ export {
   Navbar,
   ThemeSwitch,
   MaxWidthWrapper,
+  TabContent,
 };

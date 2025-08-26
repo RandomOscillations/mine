@@ -3,12 +3,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { tabs } from "@/constants";
+import { useAtom, useSetAtom } from "jotai";
+import { tabAtom } from "./atoms";
 
 const TabSwitch = () => {
-  const [activeTab, setActiveTab] = useState(tabs[0].name);
+  const [activeTab] = useAtom(tabAtom);
+  const setTab = useSetAtom(tabAtom);
   const containerRef = useRef<HTMLDivElement>(null);
   const activeTabElementRef = useRef<HTMLButtonElement>(null);
-  const [clipPath, setClipPath] = useState("inset(0px 75% 0px 0% round 17px)");
+  const [clipPath, setClipPath] = useState("inset(0px 100% 0px 0% round 17px)");
 
   useEffect(() => {
     const container = containerRef.current;
@@ -38,10 +41,10 @@ const TabSwitch = () => {
         {tabs.map((tab) => (
           <li key={tab.id}>
             <button
-              ref={activeTab === tab.name ? activeTabElementRef : null}
-              data-tab={tab.name}
+              ref={activeTab === tab.value ? activeTabElementRef : null}
+              data-tab={tab.value}
               onClick={() => {
-                setActiveTab(tab.name);
+                setTab(tab.value);
               }}
               className="flex h-[28px] items-center gap-2 rounded-full px-4 text-sm font-medium text-[var(--color-bio)] no-underline"
             >
@@ -54,7 +57,7 @@ const TabSwitch = () => {
       <motion.div
         aria-hidden
         className="absolute z-10 w-full overflow-hidden"
-        style={{ clipPath: "inset(0px 75% 0px 0% round 17px)" }}
+        style={{ clipPath }}
         animate={{ clipPath }}
         transition={{
           type: "spring",
@@ -70,9 +73,9 @@ const TabSwitch = () => {
           {tabs.map((tab) => (
             <li key={tab.id}>
               <button
-                data-tab={tab.name}
+                data-tab={tab.value}
                 onClick={() => {
-                  setActiveTab(tab.name);
+                  setTab(tab.value);
                 }}
                 className="flex h-[28px] items-center gap-2 rounded-full px-4 text-sm font-bold text-[var(--color-text)] no-underline"
                 tabIndex={-1}

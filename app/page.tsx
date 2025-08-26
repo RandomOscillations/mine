@@ -3,7 +3,10 @@ import {
   MaxWidthWrapper,
   IntroductionHeader,
   TabSwitch,
+  TabContent,
 } from "@/components";
+
+import { Provider } from "jotai";
 import React from "react";
 
 const Home = () => {
@@ -13,7 +16,10 @@ const Home = () => {
       <Navbar />
       <MaxWidthWrapper>
         <IntroductionHeader />
-        <TabSwitch />
+        <Provider>
+          <TabSwitch />
+          <TabContent />
+        </Provider>
       </MaxWidthWrapper>
     </>
   );

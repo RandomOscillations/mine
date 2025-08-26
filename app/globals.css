@@ -10,8 +10,14 @@ body {
   --color-background: #ffffff;
   --color-text: #000000;
   --color-theme-border: #e2e5e9;
+  --color-main-border: #a8b0bd;
   --color-bio: hsl(0, 0%, 40%);
   --color-tab-switch-bg: #f3f4f6;
+  --color-project-card-description: hsl(0, 0%, 40%);
+  --color-project-card-badge-border: #cccccc;
+  --color-project-card-badge-bg: transparent;
+  --color-project-card-badge-shadow: none;
+  --color-project-card-badge-icon-loader: #e2e5e9;
 }
 
 /* Apply dark mode styles when data-theme="dark" */
@@ -19,6 +25,13 @@ body {
   --color-background: hsl(0, 0%, 5%);
   --color-text: hsl(0, 0%, 95%);
   --color-theme-border: #212121;
+  --color-main-border: #262626;
   --color-bio: hsl(0, 0%, 70%);
   --color-tab-switch-bg: #262626;
+  --color-project-card-description: hsl(0, 0%, 50%);
+  --color-project-card-badge-border: transparent;
+  --color-project-card-badge-bg: #262626;
+  --color-project-card-badge-shadow: inset 1px 1px 1px 0
+    rgba(160, 160, 160, 0.2);
+  --color-project-card-badge-icon-loader: #404040;
 }
