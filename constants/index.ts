@@ -1,13 +1,18 @@
 import { IconName } from "./iconMap";
 
-export interface NavLink {
+export type TNavLink = {
   id: number;
   label: string;
   link: string;
   icon: IconName;
-}
+};
 
-export const navLinks: NavLink[] = [
+export type TTab = {
+  id: number;
+  name: string;
+};
+
+export const navLinks: TNavLink[] = [
   { id: 1, label: "X", link: "https://x.com/divandcode", icon: "XLogoIcon" },
   {
     id: 2,
@@ -27,4 +32,10 @@ export const navLinks: NavLink[] = [
     link: "mailto:your.divnoorsinghnagra@gmail.com",
     icon: "EnvelopeSimpleIcon",
   },
+];
+
+export const tabs: TTab[] = [
+  { id: 1, name: "Projects" },
+  { id: 2, name: "Experience" },
+  { id: 3, name: "Tools" },
 ];

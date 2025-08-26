@@ -1,7 +1,10 @@
-import Navbar from "@/components/navbar";
-import MaxWidthWrapper from "@/components/max-width-wrapper";
+import {
+  Navbar,
+  MaxWidthWrapper,
+  IntroductionHeader,
+  TabSwitch,
+} from "@/components";
 import React from "react";
-import IntroductionHeader from "@/components/introduction-header";
 
 const Home = () => {
   return (
@@ -10,6 +13,7 @@ const Home = () => {
       <Navbar />
       <MaxWidthWrapper>
         <IntroductionHeader />
+        <TabSwitch />
       </MaxWidthWrapper>
     </>
   );
