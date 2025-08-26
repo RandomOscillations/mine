@@ -4,10 +4,13 @@ import React from "react";
 
 const Home = () => {
   return (
-    <MaxWidthWrapper>
+    <>
       {/* navbar */}
       <Navbar />
-    </MaxWidthWrapper>
+      <MaxWidthWrapper>
+        <div></div>
+      </MaxWidthWrapper>
+    </>
   );
 };
 
