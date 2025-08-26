@@ -27,7 +27,9 @@ const ProjectCard = ({
 
       <div className="flex flex-col w-full gap-1">
         <div className="flex items-start justify-between w-full">
-          <h2 className="tracking-tight font-semibold text-base">{title}</h2>
+          <h2 className="tracking-tight font-semibold text-base text-[var(--color-text)]">
+            {title}
+          </h2>
           {/* view links */}
           <div className="flex items-center gap-4">
             {githubLink && (

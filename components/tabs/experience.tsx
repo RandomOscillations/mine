@@ -4,11 +4,11 @@ import ExperienceCard from "../cards/experience-card";
 
 const Experience = () => {
   return (
-    <div>
+    <section className="pt-3 flex flex-col gap-12">
       {experiences.map((experience) => (
         <ExperienceCard key={experience.id} {...experience} />
       ))}
-    </div>
+    </section>
   );
 };
 

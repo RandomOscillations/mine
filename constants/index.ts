@@ -35,6 +35,7 @@ export type TPosition = {
 
 export type TExperience = {
   id: number;
+  image: string;
   company: string;
   position: TPosition[];
   startDate: string;
@@ -130,12 +131,13 @@ export const experiences: TExperience[] = [
   {
     id: 1,
     company: "Univeristy of the Fraser Valley",
+    image: "/images/landing/ufv-logo.png",
     position: [
       {
         id: 1,
         title: "Computer Science Researcher",
         description:
-          "Leading ongoing research under UFV&apos;s School of Computing to develop a cross-platform psychiatric diagnostics app powered by streaming RAG-based LLMs, real-time STT/TTS pipelines, and history-aware conversational AI.",
+          "Leading ongoing research under UFV's School of Computing to develop a cross-platform psychiatric diagnostics app powered by streaming RAG-based LLMs, real-time STT/TTS pipelines, and history-aware conversational AI.",
         startDate: "2025-02-01",
         endDate: "Present",
         techStack: [
@@ -156,7 +158,7 @@ export const experiences: TExperience[] = [
         id: 2,
         title: "Frontend Developer",
         description:
-          "Built and maintained a WordPress-based web app under UFV&apos;s Graphic Design Department, focusing on motion design, Laravel backend, and scalable content management for diverse users.",
+          "Built and maintained a WordPress-based web app under UFV's Graphic Design Department, focusing on motion design, Laravel backend, and scalable content management for diverse users.",
         startDate: "2025-01-01",
         endDate: "Present",
         techStack: [
@@ -168,12 +170,13 @@ export const experiences: TExperience[] = [
         ],
       },
     ],
-    startDate: "2024-01-01",
+    startDate: "2025-01-01",
     endDate: "Present",
   },
   {
     id: 2,
     company: "Zippex",
+    image: "/images/landing/zippex-logo.png",
     position: [
       {
         id: 1,
