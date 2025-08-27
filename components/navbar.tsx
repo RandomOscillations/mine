@@ -1,15 +1,23 @@
 "use client";
 
 import React from "react";
+
 import dynamic from "next/dynamic";
+import { motion } from "motion/react";
 import { navLinks } from "@/constants";
 import { iconMap } from "@/constants/iconMap";
+import { SunIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 
 const ThemeSwitch = dynamic(() => import("./theme-swtch"), {
   ssr: false,
   loading: () => (
-    <div className="size-[25px] animate-pulse bg-gray-300 rounded-full"></div>
+    <div
+      className="rounded-full bg-[--color-background] p-2 cursor-pointer border max-w-fit animate-pulse"
+      style={{ borderColor: "var(--color-theme-border)" }}
+    >
+      <SunIcon className="text-[--color-text] w-4 h-4" />
+    </div>
   ),
 });
 
@@ -19,7 +27,13 @@ const Navbar = () => {
       {/* nav container */}
       <div className="mx-auto max-w-2xl px-5 py-3 border-x border-dashed border-[var(--color-main-border)]">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+          <motion.div
+            className="flex items-center gap-4"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             {navLinks.map((link) => {
               const IconComponent = iconMap[link.icon];
               return (
@@ -34,8 +48,15 @@ const Navbar = () => {
                 </Link>
               );
             })}
-          </div>
-          <ThemeSwitch />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+          >
+            <ThemeSwitch />
+          </motion.div>
         </nav>
       </div>
       {/* This creates the horizontal dashed line that will intersect with the wrapper borders */}

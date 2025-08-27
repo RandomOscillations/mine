@@ -124,3 +124,16 @@ export const formatDuration = (
     months === 1 ? "" : "s"
   }`;
 };
+
+/**
+ * Calculates the time left to live by subtracting current age from 80 years
+ * @param day - Birth day
+ * @param month - Birth month
+ * @param year - Birth year
+ * @returns Number of years left to live (80 - current age)
+ */
+export const calculateTimeLeft = (day: number, month: number, year: number) => {
+  const currentAge = calculateTimePassed(day, month, year);
+  const yearsLeft = 80 - currentAge;
+  return Math.max(0, yearsLeft); // Ensure it doesn't go negative
+};
