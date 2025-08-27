@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div className="max-w-4xl mx-auto">
       {/* nav container */}
-      <div className="mx-auto max-w-2xl px-5 py-3 border-x border-dashed border-[var(--color-main-border)]">
+      <div className="mx-auto max-w-3xl px-5 py-3 border-x border-dashed border-[var(--color-main-border)]">
         <nav className="flex items-center justify-between">
           <motion.div
             className="flex items-center gap-4"
@@ -35,18 +35,34 @@ const Navbar = () => {
             viewport={{ once: true }}
           >
             {navLinks.map((link) => {
-              const IconComponent = iconMap[link.icon];
-              return (
-                <Link
-                  key={link.id}
-                  href={link.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-500 dark:text-neutral-500 hover:text-[var(--color-text)] transition-colors duration-75"
-                >
-                  <IconComponent className="w-5 h-5" />
-                </Link>
-              );
+              // Check if the link has an icon property
+              if (link.icon) {
+                const IconComponent = iconMap[link.icon];
+                return (
+                  <Link
+                    key={link.id}
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 dark:text-neutral-500 hover:text-[var(--color-text)] transition-colors duration-75"
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </Link>
+                );
+              } else {
+                // Render as text for links without icons (like Cal)
+                return (
+                  <Link
+                    key={link.id}
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 dark:text-neutral-500 hover:text-[var(--color-text)] transition-colors duration-75 font-medium text-xs"
+                  >
+                    {link.label}
+                  </Link>
+                );
+              }
             })}
           </motion.div>
           <motion.div

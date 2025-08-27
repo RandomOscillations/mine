@@ -4,6 +4,7 @@ import AgeCounter from "./age-counter";
 import Navbar from "./navbar";
 import ThemeSwitch from "./theme-swtch";
 import MaxWidthWrapper from "./max-width-wrapper";
+import PageFooter from "./page-footer";
 
 export {
   IntroductionHeader,
@@ -13,4 +14,5 @@ export {
   ThemeSwitch,
   MaxWidthWrapper,
   TabContent,
+  PageFooter,
 };

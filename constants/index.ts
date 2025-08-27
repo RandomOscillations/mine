@@ -5,7 +5,7 @@ export type TNavLink = {
   id: number;
   label: string;
   link: string;
-  icon: IconName;
+  icon?: IconName;
 };
 
 export type TTab = {
@@ -50,6 +50,11 @@ export type TTools = {
 };
 
 export const navLinks: TNavLink[] = [
+  {
+    id: 0,
+    label: "Cal",
+    link: "https://cal.com/divnoor-singh-nagra-zmo8bj/30min",
+  },
   { id: 1, label: "X", link: "https://x.com/divandcode", icon: "XLogoIcon" },
   {
     id: 2,
@@ -83,26 +88,8 @@ export const projects: TProjects[] = [
     title: "Radal",
     description: "Cursor for creating fine-tuning pipelines",
     image: "/images/landing/radal-logo-dark.png",
-    githubLink: "https://github.com/Divnoor-4602/radal",
-    liveLink: "https://radal.vercel.app/",
-    techStack: [
-      { name: "Next.js", icon: "nextjs2" },
-      { name: "TypeScript", icon: "typescript" },
-      { name: "Python", icon: "pytorch", customIcon: "python-icon" },
-      { name: "TailwindCSS", icon: "tailwindcss" },
-      { name: "Shadcn UI", icon: "shadcnui" },
-      { name: "Vercel", icon: "vercel" },
-      { name: "Azure", icon: "azure", customIcon: "azure-icon" },
-      { name: "Hugging Face", icon: "huggingface" },
-    ],
-  },
-  {
-    id: 1,
-    title: "Radal",
-    description: "Cursor for creating fine-tuning pipelines",
-    image: "/images/landing/radal-logo-dark.png",
-    githubLink: "https://github.com/Divnoor-4602/radal",
-    liveLink: "https://radal.vercel.app/",
+    githubLink: "",
+    liveLink: "https://radal.ai/",
     techStack: [
       { name: "Next.js", icon: "nextjs2" },
       { name: "TypeScript", icon: "typescript" },
@@ -120,8 +107,8 @@ export const projects: TProjects[] = [
     description:
       "Clarity.ai helps assess your mental health through AI conversations, as part of ongoing research.",
     image: "/images/landing/clarity-logo.png",
-    githubLink: "https://github.com/Divnoor-4602/radal",
-    liveLink: "https://radal.vercel.app/",
+    githubLink: "",
+    liveLink: ".",
     techStack: [
       { name: "React Native", icon: "react" },
       { name: "TypeScript", icon: "typescript" },
@@ -139,8 +126,8 @@ export const projects: TProjects[] = [
     description:
       "Mental health app for pregnant women offering support, journaling, and mood report sharing.",
     image: "/images/landing/mamaease-logo.png",
-    githubLink: "https://github.com/Divnoor-4602/radal",
-    liveLink: "https://radal.vercel.app/",
+    githubLink: "https://github.com/Divnoor-4602/mamaease",
+    liveLink: "",
     techStack: [
       { name: "React Native", icon: "react" },
       { name: "TypeScript", icon: "typescript" },

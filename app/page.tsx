@@ -4,6 +4,7 @@ import {
   IntroductionHeader,
   TabSwitch,
   TabContent,
+  PageFooter,
 } from "@/components";
 
 import { Provider } from "jotai";
@@ -21,6 +22,8 @@ const Home = () => {
           <TabContent />
         </Provider>
       </MaxWidthWrapper>
+      {/* footer section */}
+      <PageFooter />
     </>
   );
 };
