@@ -97,6 +97,24 @@ export const projects: TProjects[] = [
     ],
   },
   {
+    id: 1,
+    title: "Radal",
+    description: "Cursor for creating fine-tuning pipelines",
+    image: "/images/landing/radal-logo-dark.png",
+    githubLink: "https://github.com/Divnoor-4602/radal",
+    liveLink: "https://radal.vercel.app/",
+    techStack: [
+      { name: "Next.js", icon: "nextjs2" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "Python", icon: "pytorch", customIcon: "python-icon" },
+      { name: "TailwindCSS", icon: "tailwindcss" },
+      { name: "Shadcn UI", icon: "shadcnui" },
+      { name: "Vercel", icon: "vercel" },
+      { name: "Azure", icon: "azure", customIcon: "azure-icon" },
+      { name: "Hugging Face", icon: "huggingface" },
+    ],
+  },
+  {
     id: 2,
     title: "Clarity.ai",
     description:

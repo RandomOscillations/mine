@@ -22,12 +22,18 @@ const IntroductionHeader = () => {
         <AgeCounter />
       </div>
       {/* bio */}
-      <div className="text-sm font-medium text-[var(--color-bio)]">
+      <motion.div
+        className="text-sm font-medium text-[var(--color-bio)]"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, ease: "easeOut", delay: 0.1 }}
+        viewport={{ once: true }}
+      >
         I&apos;m a software engineer from Vancouver 🇨🇦, currently building{" "}
         <span className="text-[var(--color-text)] font-bold">Radal</span> and{" "}
         <span className="text-[var(--color-text)] font-bold">notes0</span>. I
         research LLMs and have a passion for design.
-      </div>
+      </motion.div>
     </header>
   );
 };

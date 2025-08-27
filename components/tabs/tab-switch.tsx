@@ -36,7 +36,13 @@ const TabSwitch = () => {
   }, [activeTab]);
 
   return (
-    <div className="relative flex flex-col items-center w-fit my-6">
+    <motion.div
+      className="relative flex flex-col items-center w-fit my-6"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: true }}
+    >
       <ul className="relative flex w-full justify-center gap-2">
         {tabs.map((tab) => (
           <li key={tab.id}>
@@ -86,7 +92,7 @@ const TabSwitch = () => {
           ))}
         </ul>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
