@@ -5,10 +5,10 @@ import { motion } from "motion/react";
 
 const PageFooter = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 max-w-4xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto">
       {/* This creates the horizontal dashed line that will intersect with the wrapper borders */}
       <div className="w-full border-t border-dashed border-[var(--color-main-border)]"></div>
-      {/* footer container */}
+      {/* footer container - aligned with MaxWidthWrapper */}
       <div className="mx-auto max-w-3xl px-5 py-3 border-x border-dashed border-[var(--color-main-border)]">
         {/* Add your footer content here */}
         <div className="flex items-center justify-between">
