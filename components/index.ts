@@ -5,6 +5,7 @@ import Navbar from "./navbar";
 import ThemeSwitch from "./theme-swtch";
 import MaxWidthWrapper from "./max-width-wrapper";
 import PageFooter from "./page-footer";
+import LiveLinkPreview from "./live-link-preview";
 
 export {
   IntroductionHeader,
@@ -15,4 +16,5 @@ export {
   MaxWidthWrapper,
   TabContent,
   PageFooter,
+  LiveLinkPreview,
 };

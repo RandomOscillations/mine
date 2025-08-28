@@ -1,26 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { LinkIcon } from "@phosphor-icons/react";
 import CustomStackBadge from "../custom-stack-badge";
-
-export type TProjectCard = {
-  title: string;
-  description: string;
-  image: string;
-  githubLink: string;
-  liveLink: string;
-  techStack: { name: string; icon: string; customIcon?: string }[]; // customIcon should be the filename without .svg extension
-};
+import LiveLinkPreview from "../live-link-preview";
+import { TProjects } from "@/constants";
 
 const ProjectCard = ({
   title,
   description,
-  image,
   githubLink,
   liveLink,
+  previewImage,
   techStack,
-}: TProjectCard) => {
+}: TProjects) => {
   return (
     <div className="w-full flex flex-col gap-4">
       {/* project header */}
@@ -43,14 +35,11 @@ const ProjectCard = ({
               </Link>
             )}
             {liveLink && (
-              <Link
-                className="flex items-center gap-1 text-[var(--color-project-card-description)] hover:text-[var(--color-text)]"
-                href={liveLink}
-                target="_blank"
-              >
-                <span className="text-xs">View</span>
-                <LinkIcon size={12} />
-              </Link>
+              <LiveLinkPreview
+                liveLink={liveLink}
+                previewImage={previewImage}
+                previewAlt={`${title} preview`}
+              />
             )}
           </div>
         </div>

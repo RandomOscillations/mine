@@ -20,6 +20,10 @@ body {
   --color-project-card-badge-icon-loader: #e2e5e9;
   --color-experience-card-description: hsl(0, 0%, 60%);
   --color-tool-card-description: hsl(0, 0%, 20%);
+  --color-hover-card-bg: #ffffff;
+  --color-hover-card-border: transparent;
+  --color-hover-card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* Apply dark mode styles when data-theme="dark" */
@@ -38,4 +42,8 @@ body {
   --color-project-card-badge-icon-loader: #404040;
   --color-experience-card-description: hsl(0, 0%, 50%);
   --color-tool-card-description: hsl(0, 0%, 70%);
+  --color-hover-card-bg: #1a1a1a;
+  --color-hover-card-border: #262626;
+  --color-hover-card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5),
+    0 10px 10px -5px rgba(0, 0, 0, 0.3);
 }

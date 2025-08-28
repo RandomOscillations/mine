@@ -21,6 +21,7 @@ export type TProjects = {
   image: string;
   githubLink: string;
   liveLink: string;
+  previewImage: string;
   techStack: { name: string; icon: string; customIcon?: string }[]; // customIcon should be the filename without .svg extension
 };
 
@@ -90,6 +91,7 @@ export const projects: TProjects[] = [
     image: "/images/landing/radal-logo-dark.png",
     githubLink: "",
     liveLink: "https://radal.ai/",
+    previewImage: "/images/radal-preview.png",
     techStack: [
       { name: "Next.js", icon: "nextjs2" },
       { name: "TypeScript", icon: "typescript" },
@@ -109,6 +111,7 @@ export const projects: TProjects[] = [
     image: "/images/landing/clarity-logo.png",
     githubLink: "",
     liveLink: ".",
+    previewImage: "/images/clarity-preview.png",
     techStack: [
       { name: "React Native", icon: "react" },
       { name: "TypeScript", icon: "typescript" },
@@ -128,6 +131,7 @@ export const projects: TProjects[] = [
     image: "/images/landing/mamaease-logo.png",
     githubLink: "https://github.com/Divnoor-4602/mamaease",
     liveLink: "",
+    previewImage: "/images/mamaease-preview.png",
     techStack: [
       { name: "React Native", icon: "react" },
       { name: "TypeScript", icon: "typescript" },
