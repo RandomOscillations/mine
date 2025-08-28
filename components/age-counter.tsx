@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, animate, AnimatePresence } from "motion/react";
+import { motion, animate } from "motion/react";
 import React, { useEffect, useMemo, useState } from "react";
 import { useAnimatedCounter } from "@/hooks";
 import { calculateTimePassed, calculateTimeLeft } from "@/lib/utils";
