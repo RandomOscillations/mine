@@ -6,8 +6,8 @@ import { motion } from "motion/react";
 
 const IntroductionHeader = () => {
   return (
-    <header className="space-y-6">
-      <div className="flex items-end justify-between">
+    <header className="space-y-6 max-sm:pt-3">
+      <div className="flex items-end justify-between max-sm:flex-col-reverse max-sm:items-start">
         {/* Introduction */}
         <motion.h1
           className="font-bold text-2xl tracking-tight pt-2"
@@ -19,7 +19,9 @@ const IntroductionHeader = () => {
           Hey, I&apos;m Divnoor
         </motion.h1>
         {/* age counter */}
-        <AgeCounter />
+        <div className="max-sm:flex max-sm:justify-end max-sm:w-full">
+          <AgeCounter />
+        </div>
       </div>
       {/* bio */}
       <motion.div
