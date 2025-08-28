@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "Divnoor | Full Stack Developer | Based in Vancouver",
   description:
     "Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies",
-  url: "divnoor.me",
+  url: "www.divnoor.me",
   ogImage: "/images/social-preview.png",
   links: {
     twitter: "https://x.com/divandcode",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [siteConfig.ogImage],
+    images: [`https://${siteConfig.url}${siteConfig.ogImage}`],
     creator: "@divandcode",
     site: "@divandcode",
   },
@@ -138,7 +138,13 @@ export function generatePostMetadata(
     twitter: {
       title: `${postTitle} | ${siteConfig.name}`,
       description: postDescription,
-      images: postImage ? [postImage] : undefined,
+      images: postImage
+        ? [
+            postImage.startsWith("http")
+              ? postImage
+              : `https://${siteConfig.url}${postImage}`,
+          ]
+        : undefined,
     },
   };
 }
