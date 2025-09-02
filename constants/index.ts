@@ -113,14 +113,10 @@ export const projects: TProjects[] = [
     liveLink: "https://gitprobe.com/",
     previewImage: "/images/gitprobe-preview.png",
     techStack: [
-      { name: "React Native", icon: "react" },
+      { name: "React", icon: "react" },
       { name: "TypeScript", icon: "typescript" },
       { name: "Python", icon: "pytorch", customIcon: "python-icon" },
       { name: "TailwindCSS", icon: "tailwindcss" },
-      { name: "Supabase", icon: "supabase", customIcon: "supabase-icon" },
-      { name: "Expo", icon: "expo", customIcon: "expo-icon" },
-      { name: "Gemini", icon: "gemini", customIcon: "gemini-icon" },
-      { name: "Hugging Face", icon: "huggingface" },
     ],
   },
   {
@@ -133,12 +129,8 @@ export const projects: TProjects[] = [
     liveLink: "",
     previewImage: "/images/mamaease-preview.png",
     techStack: [
-      { name: "React Native", icon: "react" },
-      { name: "TypeScript", icon: "typescript" },
-      { name: "TailwindCSS", icon: "tailwindcss" },
-      { name: "Supabase", icon: "supabase", customIcon: "supabase-icon" },
-      { name: "Expo", icon: "expo", customIcon: "expo-icon" },
-      { name: "OpenAI", icon: "openai" },
+      { name: "C++", icon: "cpp", customIcon: "cpp-icon" },
+      { name: "C", icon: "c", customIcon: "c-icon" },
     ],
   },
 ];
@@ -146,23 +138,18 @@ export const projects: TProjects[] = [
 export const experiences: TExperience[] = [
   {
     id: 1,
-    company: "Univeristy of the Fraser Valley",
-    image: "/images/landing/ufv-logo.png",
+    company: "High Frequency Highway",
+    image: "/images/landing/hfh-logo.png",
     position: [
       {
         id: 1,
-        title: "Computer Science Researcher",
+        title: "Machine Learning Intern",
         description:
-          "Leading ongoing research under UFV's School of Computing to develop a cross-platform psychiatric diagnostics app powered by streaming RAG-based LLMs, real-time STT/TTS pipelines, and history-aware conversational AI.",
-        startDate: "2025-02-01",
-        endDate: "Present",
+          "Worked on a recommendation algorithm and added the functionality to recommend new music for the users. Also worked on a personalized meditation generator which generates a meditation based on the user's mood and preferences.",
+        startDate: "2025-05-25",
+        endDate: "2025-08-04",
         techStack: [
-          { name: "Next.js", icon: "nextjs2" },
-          { name: "TypeScript", icon: "typescript" },
           { name: "Python", icon: "pytorch", customIcon: "python-icon" },
-          { name: "TailwindCSS", icon: "tailwindcss" },
-          { name: "Supabase", icon: "supabase", customIcon: "supabase-icon" },
-          { name: "Expo", icon: "expo", customIcon: "expo-icon" },
           { name: "Gemini", icon: "gemini", customIcon: "gemini-icon" },
           { name: "Hugging Face", icon: "huggingface" },
           { name: "OpenAI", icon: "openai" },
@@ -170,49 +157,52 @@ export const experiences: TExperience[] = [
           { name: "Colab", icon: "colab" },
         ],
       },
-      {
-        id: 2,
-        title: "Frontend Developer",
-        description:
-          "Built and maintained a WordPress-based web app under UFV's Graphic Design Department, focusing on motion design, Laravel backend, and scalable content management for diverse users.",
-        startDate: "2025-01-01",
-        endDate: "Present",
-        techStack: [
-          { name: "WordPress", icon: "wordpress" },
-          { name: "JavaScript", icon: "js" },
-          { name: "Laravel", icon: "laravel" },
-          { name: "PHP", icon: "php" },
-          { name: "Figma", icon: "figma" },
-        ],
-      },
     ],
-    startDate: "2025-01-01",
-    endDate: "Present",
+    startDate: "2025-05-25",
+    endDate: "2025-08-04",
   },
   {
     id: 2,
-    company: "Zippex",
-    image: "/images/landing/zippex-logo.png",
+    company: "e-con Systems",
+    image: "/images/landing/e-con-systems-logo.png",
     position: [
       {
         id: 1,
-        title: "Full Stack Developer",
+        title: "Application Development Intern",
         description:
-          "Developed and maintained a web app for Zippex, a startup that provides a platform for users to create and share their own zip codes.",
-        startDate: "2024-08-01",
-        endDate: "2024-12-31",
+          "Developed and released a Sensor Caliberation application for the USB 3.0 cameras that includes the UVC-compliant plug-and-play USB3 camera.",
+        startDate: "2023-06-19",
+        endDate: "2023-08-23",
         techStack: [
-          { name: "Next.js", icon: "nextjs2" },
-          { name: "React Native", icon: "react" },
-          { name: "TypeScript", icon: "typescript" },
-          { name: "TailwindCSS", icon: "tailwindcss" },
-          { name: "Firebase", icon: "firebase" },
-          { name: "Expo", icon: "expo", customIcon: "expo-icon" },
+          { name: "Python", icon: "pytorch", customIcon: "python-icon" },
+          { name: "PyQt5", icon: "pyqt5", customIcon: "pyqt-icon" },
         ],
       },
     ],
-    startDate: "2024-08-01",
-    endDate: "2024-12-31",
+    startDate: "2023-06-19",
+    endDate: "2023-08-23",
+  },
+  {
+    id: 3,
+    company: "Mobiveil",
+    image: "/images/landing/mobiveil-logo.png",
+    position: [
+      {
+        id: 1,
+        title: "Machine Learning Intern",
+        description:
+          "Assisted in developing a person detection and person tracking algorithm using DetectNet V2, as a part of an Autonomous Mobile Robot (AMR).",
+        startDate: "2022-07-11",
+        endDate: "2022-08-17",
+        techStack: [
+          { name: "C++", icon: "cpp", customIcon: "cpp-icon" },
+          { name: "Cuda", icon: "cuda", customIcon: "cuda-icon" },
+          { name: "Bash", icon: "bash", customIcon: "bash-icon" },
+        ],
+      },
+    ],
+    startDate: "2023-06-19",
+    endDate: "2023-08-15",
   },
 ];
 
@@ -226,10 +216,10 @@ export const frontendTools: TTools[] = [
 export const backendTools: TTools[] = [
   { id: 1, name: "Vercel", icon: "vercel" },
   { id: 2, name: "Azure", icon: "azure", customIcon: "azure-icon" },
-  { id: 3, name: "Drizzle", icon: "drizzle", customIcon: "drizzle-icon" },
-  { id: 4, name: "tRPC", icon: "tRPC" },
-  { id: 5, name: "PostgreSQL", icon: "postgresql" },
-  { id: 7, name: "Supabase", icon: "supabase", customIcon: "supabase-icon" },
-  { id: 6, name: "Docker", icon: "docker" },
+  { id: 3, name: "MySQL", icon: "mysql", customIcon: "mysql-icon" },
+  { id: 4, name: "PostgreSQL", icon: "postgresql" },
+  { id: 5, name: "Supabase", icon: "supabase", customIcon: "supabase-icon" },
+  { id: 6, name: "Firebase", icon: "firebase", customIcon: "firebase-icon" },
+  { id: 7, name: "Docker", icon: "docker" },
   { id: 8, name: "Node.js", icon: "nodejs" },
 ];
