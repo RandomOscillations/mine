@@ -54,25 +54,25 @@ export const navLinks: TNavLink[] = [
   {
     id: 0,
     label: "Cal",
-    link: "https://cal.com/divnoor-singh-nagra-zmo8bj/30min",
+    link: "https://cal.com/adithya-srini/30min",
   },
-  { id: 1, label: "X", link: "https://x.com/divandcode", icon: "XLogoIcon" },
+  { id: 1, label: "X", link: "https://x.com/adithyasrini25", icon: "XLogoIcon" },
   {
     id: 2,
     label: "GitHub",
-    link: "https://github.com/Divnoor-4602",
+    link: "https://github.com/RandomOscillations",
     icon: "GithubLogoIcon",
   },
   {
     id: 3,
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/divnoor-nagra/",
+    link: "https://www.linkedin.com/in/adithya-srinivasan-16527627a/",
     icon: "LinkedinLogoIcon",
   },
   {
     id: 4,
     label: "Mail",
-    link: "mailto:your.divnoorsinghnagra@gmail.com",
+    link: "mailto:adithya.srini8912@gmail.com",
     icon: "EnvelopeSimpleIcon",
   },
 ];
@@ -105,13 +105,13 @@ export const projects: TProjects[] = [
   },
   {
     id: 2,
-    title: "Clarity.ai",
+    title: "GitProbe",
     description:
-      "Clarity.ai helps assess your mental health through AI conversations, as part of ongoing research.",
-    image: "/images/landing/clarity-logo.png",
+      "GitProbe turns any GitHub repository into a clean, readable summary of its architecture and logic, perfect for giving LLMs instant context.",
+    image: "/images/landing/gitprobe-logo.png",
     githubLink: "",
-    liveLink: ".",
-    previewImage: "/images/clarity-preview.png",
+    liveLink: "https://gitprobe.com/",
+    previewImage: "/images/gitprobe-preview.png",
     techStack: [
       { name: "React Native", icon: "react" },
       { name: "TypeScript", icon: "typescript" },
@@ -125,11 +125,11 @@ export const projects: TProjects[] = [
   },
   {
     id: 3,
-    title: "Mamaease",
+    title: "Out-of-Order Superscalar Processor Simulator",
     description:
-      "Mental health app for pregnant women offering support, journaling, and mood report sharing.",
+      "Designed and implemented a aimulator for an Out-of-Order Superscalar Processor capable of issuing and retiring multiple instructions per cycle.",
     image: "/images/landing/mamaease-logo.png",
-    githubLink: "https://github.com/Divnoor-4602/mamaease",
+    githubLink: "https://github.com/RandomOscillations/Out-of-Order-Processor-Simulator",
     liveLink: "",
     previewImage: "/images/mamaease-preview.png",
     techStack: [

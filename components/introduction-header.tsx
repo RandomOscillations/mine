@@ -16,7 +16,7 @@ const IntroductionHeader = () => {
           transition={{ duration: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Hey, I&apos;m Divnoor
+          Hey, I&apos;m Adithya
         </motion.h1>
         {/* age counter */}
         <div className="max-sm:flex max-sm:justify-end max-sm:w-full">
@@ -31,10 +31,10 @@ const IntroductionHeader = () => {
         transition={{ duration: 0.2, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true }}
       >
-        I&apos;m a software engineer from Vancouver 🇨🇦, currently building{" "}
+        I&apos;m a software engineer from Raleigh, currently building{" "}
         <span className="text-[var(--color-text)] font-bold">Radal</span> and{" "}
-        <span className="text-[var(--color-text)] font-bold">notes0</span>. I
-        research LLMs and have a passion for design.
+        <span className="text-[var(--color-text)] font-bold">compilePro</span>. I
+        research LLMs and love working on low level systems.
       </motion.div>
     </header>
   );

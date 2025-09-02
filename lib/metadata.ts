@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Divnoor",
-  title: "Divnoor | Full Stack Developer | Based in Vancouver",
+  name: "Adithya",
+  title: "Adithya | Full Stack Developer | Based in Raleigh",
   description:
     "Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies",
   url: "www.divnoor.me",
